@@ -7,3 +7,5 @@ C:\Users\joela\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-ardu
 ```
 -C"C:\Users\joela\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf" -v -V -patmega328p -carduino -PCOM5 -b115200 -D -Uflash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
 ```
+
+Replace **joela** with your username and **-PCOM5** with the port that the current Arduino 
