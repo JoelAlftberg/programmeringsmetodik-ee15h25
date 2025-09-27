@@ -1,0 +1,1121 @@
+
+yrgo.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000006d6  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000ce  00000000  00000000  000000d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800100  00800100  000006d6  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  000006d6  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 00000054  00000000  00000000  00000705  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001f0  00000000  00000000  00000759  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000213c  00000000  00000000  00000949  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000956  00000000  00000000  00002a85  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000c3f  00000000  00000000  000033db  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000003d4  00000000  00000000  0000401c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000022c  00000000  00000000  000043f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000007f5  00000000  00000000  0000461c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000001b8  00000000  00000000  00004e11  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000004  000005e0  000005e0  000006b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00004fcc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .text.blink_led 0000004a  00000346  00000346  0000041a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.wait_input 0000003e  00000390  00000390  00000464  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.game_wait_for_player 0000003c  0000040c  0000040c  000004e0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.game_wait_start 000000a2  00000232  00000232  00000306  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .rodata       00000014  00800104  000005ee  000006c2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .text.game_loop 00000164  000000ce  000000ce  000001a2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.main    00000016  00000536  00000536  0000060a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.wait    0000001e  000004fa  000004fa  000005ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.sw1     0000000c  000005c8  000005c8  0000069c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.sw3     0000000c  000005d4  000005d4  000006a8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.led1    00000014  00000578  00000578  0000064c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.led2    00000014  0000058c  0000058c  00000660  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.led3    00000014  000005a0  000005a0  00000674  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.led     00000072  000002d4  000002d4  000003a8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.setup_p1 00000020  000004ba  000004ba  0000058e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.libgcc.div 00000028  00000448  00000448  0000051c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.libgcc.div 00000028  00000470  00000470  00000544  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text.__dummy_fini 00000002  000005e8  000005e8  000006bc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.__dummy_funcs_on_exit 00000002  000005ea  000005ea  000006be  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.__dummy_simulator_exit 00000002  000005ec  000005ec  000006c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.exit    00000016  0000054c  0000054c  00000620  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.srand   00000014  000005b4  000005b4  00000688  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text.rand    0000003e  000003ce  000003ce  000004a2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 38 .bss.seed     00000004  00800118  00800118  000006d6  2**0
+                  ALLOC
+ 39 .text.time    00000022  00000498  00000498  0000056c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 40 .text._Exit   00000004  000005e4  000005e4  000006b8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 41 .text.libgcc.mul 00000020  000004da  000004da  000005ae  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 42 .text.libgcc.mul 00000016  00000562  00000562  00000636  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 43 .text.libgcc.mul 0000001e  00000518  00000518  000005ec  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3d 00 	jmp	0x7a	; 0x7a <__ctors_end>
+   4:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+   8:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+   c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  10:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  14:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  18:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  1c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  20:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  24:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  28:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  2c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  30:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  34:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  38:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  3c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  40:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  44:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  48:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  4c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  50:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  54:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  58:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  5c:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  60:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+  64:	0c 94 f0 02 	jmp	0x5e0	; 0x5e0 <__bad_interrupt>
+
+00000068 <.dinit>:
+  68:	01 00       	.word	0x0001	; ????
+  6a:	01 04       	cpc	r0, r1
+  6c:	80 01       	movw	r16, r0
+  6e:	04 01       	movw	r0, r8
+  70:	18 00       	.word	0x0018	; ????
+  72:	05 ee       	ldi	r16, 0xE5	; 229
+  74:	01 18       	sub	r0, r1
+  76:	01 1c       	adc	r0, r1
+  78:	80 00       	.word	0x0080	; ????
+
+0000007a <__ctors_end>:
+  7a:	11 24       	eor	r1, r1
+  7c:	1f be       	out	0x3f, r1	; 63
+  7e:	cf ef       	ldi	r28, 0xFF	; 255
+  80:	d8 e0       	ldi	r29, 0x08	; 8
+  82:	de bf       	out	0x3e, r29	; 62
+  84:	cd bf       	out	0x3d, r28	; 61
+
+00000086 <__do_copy_data>:
+  86:	e8 e6       	ldi	r30, 0x68	; 104
+  88:	f0 e0       	ldi	r31, 0x00	; 0
+  8a:	40 e0       	ldi	r20, 0x00	; 0
+  8c:	17 c0       	rjmp	.+46     	; 0xbc <__do_clear_bss+0x8>
+  8e:	b5 91       	lpm	r27, Z+
+  90:	a5 91       	lpm	r26, Z+
+  92:	35 91       	lpm	r19, Z+
+  94:	25 91       	lpm	r18, Z+
+  96:	05 91       	lpm	r16, Z+
+  98:	07 fd       	sbrc	r16, 7
+  9a:	0c c0       	rjmp	.+24     	; 0xb4 <__do_clear_bss>
+  9c:	95 91       	lpm	r25, Z+
+  9e:	85 91       	lpm	r24, Z+
+  a0:	ef 01       	movw	r28, r30
+  a2:	f9 2f       	mov	r31, r25
+  a4:	e8 2f       	mov	r30, r24
+  a6:	05 90       	lpm	r0, Z+
+  a8:	0d 92       	st	X+, r0
+  aa:	a2 17       	cp	r26, r18
+  ac:	b3 07       	cpc	r27, r19
+  ae:	d9 f7       	brne	.-10     	; 0xa6 <__do_copy_data+0x20>
+  b0:	fe 01       	movw	r30, r28
+  b2:	04 c0       	rjmp	.+8      	; 0xbc <__do_clear_bss+0x8>
+
+000000b4 <__do_clear_bss>:
+  b4:	1d 92       	st	X+, r1
+  b6:	a2 17       	cp	r26, r18
+  b8:	b3 07       	cpc	r27, r19
+  ba:	e1 f7       	brne	.-8      	; 0xb4 <__do_clear_bss>
+  bc:	e9 37       	cpi	r30, 0x79	; 121
+  be:	f4 07       	cpc	r31, r20
+  c0:	31 f7       	brne	.-52     	; 0x8e <__do_copy_data+0x8>
+  c2:	0e 94 9b 02 	call	0x536	; 0x536 <main>
+  c6:	0c 94 a6 02 	jmp	0x54c	; 0x54c <exit>
+
+000000ca <_exit>:
+  ca:	f8 94       	cli
+
+000000cc <__stop_program>:
+  cc:	ff cf       	rjmp	.-2      	; 0xcc <__stop_program>
+
+Disassembly of section .text:
+
+000005e0 <__bad_interrupt>:
+ 5e0:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.blink_led:
+
+00000346 <blink_led>:
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void blink_led(uint8_t led_number, uint8_t blink_times, uint16_t wait_ms){
+ 346:	ff 92       	push	r15
+ 348:	0f 93       	push	r16
+ 34a:	1f 93       	push	r17
+ 34c:	cf 93       	push	r28
+ 34e:	df 93       	push	r29
+ 350:	d8 2f       	mov	r29, r24
+ 352:	f6 2e       	mov	r15, r22
+ 354:	8a 01       	movw	r16, r20
+	
+	led(0, false);
+ 356:	60 e0       	ldi	r22, 0x00	; 0
+ 358:	80 e0       	ldi	r24, 0x00	; 0
+ 35a:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+	
+	for(uint8_t i = 0; i < blink_times; i++){
+ 35e:	c0 e0       	ldi	r28, 0x00	; 0
+ 360:	0f c0       	rjmp	.+30     	; 0x380 <blink_led+0x3a>
+		led(led_number, true);
+ 362:	61 e0       	ldi	r22, 0x01	; 1
+ 364:	8d 2f       	mov	r24, r29
+ 366:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+		wait(wait_ms);
+ 36a:	c8 01       	movw	r24, r16
+ 36c:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+		led(led_number, false);
+ 370:	60 e0       	ldi	r22, 0x00	; 0
+ 372:	8d 2f       	mov	r24, r29
+ 374:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+		wait(wait_ms);
+ 378:	c8 01       	movw	r24, r16
+ 37a:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+
+void blink_led(uint8_t led_number, uint8_t blink_times, uint16_t wait_ms){
+	
+	led(0, false);
+	
+	for(uint8_t i = 0; i < blink_times; i++){
+ 37e:	cf 5f       	subi	r28, 0xFF	; 255
+ 380:	cf 15       	cp	r28, r15
+ 382:	78 f3       	brcs	.-34     	; 0x362 <blink_led+0x1c>
+		wait(wait_ms);
+		led(led_number, false);
+		wait(wait_ms);
+	}
+	
+}
+ 384:	df 91       	pop	r29
+ 386:	cf 91       	pop	r28
+ 388:	1f 91       	pop	r17
+ 38a:	0f 91       	pop	r16
+ 38c:	ff 90       	pop	r15
+ 38e:	08 95       	ret
+
+Disassembly of section .text.wait_input:
+
+00000390 <wait_input>:
+
+bool wait_input(uint16_t ms_to_wait, bool (*button)(void)){
+ 390:	ef 92       	push	r14
+ 392:	ff 92       	push	r15
+ 394:	0f 93       	push	r16
+ 396:	1f 93       	push	r17
+ 398:	cf 93       	push	r28
+ 39a:	df 93       	push	r29
+ 39c:	8c 01       	movw	r16, r24
+ 39e:	7b 01       	movw	r14, r22
+	
+	for(uint16_t i = 0; i < ms_to_wait; i++){
+ 3a0:	c0 e0       	ldi	r28, 0x00	; 0
+ 3a2:	d0 e0       	ldi	r29, 0x00	; 0
+ 3a4:	09 c0       	rjmp	.+18     	; 0x3b8 <wait_input+0x28>
+		
+		if(button()){
+ 3a6:	f7 01       	movw	r30, r14
+ 3a8:	09 95       	icall
+ 3aa:	81 11       	cpse	r24, r1
+ 3ac:	09 c0       	rjmp	.+18     	; 0x3c0 <wait_input+0x30>
+			return true;
+		}
+		wait(1);
+ 3ae:	81 e0       	ldi	r24, 0x01	; 1
+ 3b0:	90 e0       	ldi	r25, 0x00	; 0
+ 3b2:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+	
+}
+
+bool wait_input(uint16_t ms_to_wait, bool (*button)(void)){
+	
+	for(uint16_t i = 0; i < ms_to_wait; i++){
+ 3b6:	21 96       	adiw	r28, 0x01	; 1
+ 3b8:	c0 17       	cp	r28, r16
+ 3ba:	d1 07       	cpc	r29, r17
+ 3bc:	a0 f3       	brcs	.-24     	; 0x3a6 <wait_input+0x16>
+			return true;
+		}
+		wait(1);
+	}
+	
+	return false;
+ 3be:	80 e0       	ldi	r24, 0x00	; 0
+	
+}
+ 3c0:	df 91       	pop	r29
+ 3c2:	cf 91       	pop	r28
+ 3c4:	1f 91       	pop	r17
+ 3c6:	0f 91       	pop	r16
+ 3c8:	ff 90       	pop	r15
+ 3ca:	ef 90       	pop	r14
+ 3cc:	08 95       	ret
+
+Disassembly of section .text.game_wait_for_player:
+
+0000040c <game_wait_for_player>:
+
+uint8_t game_wait_for_player(void){
+ 40c:	cf 93       	push	r28
+	
+	while (1){
+		
+		for(uint8_t i = 1; i < 4; i++){
+ 40e:	c1 e0       	ldi	r28, 0x01	; 1
+ 410:	15 c0       	rjmp	.+42     	; 0x43c <game_wait_for_player+0x30>
+			
+			led(i, true);
+ 412:	61 e0       	ldi	r22, 0x01	; 1
+ 414:	8c 2f       	mov	r24, r28
+ 416:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			
+			if(wait_input(500, sw1)){
+ 41a:	64 ee       	ldi	r22, 0xE4	; 228
+ 41c:	72 e0       	ldi	r23, 0x02	; 2
+ 41e:	84 ef       	ldi	r24, 0xF4	; 244
+ 420:	91 e0       	ldi	r25, 0x01	; 1
+ 422:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 426:	81 11       	cpse	r24, r1
+ 428:	0c c0       	rjmp	.+24     	; 0x442 <game_wait_for_player+0x36>
+				return i;
+			}
+			
+			led(i, false);
+ 42a:	60 e0       	ldi	r22, 0x00	; 0
+ 42c:	8c 2f       	mov	r24, r28
+ 42e:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			wait(500);
+ 432:	84 ef       	ldi	r24, 0xF4	; 244
+ 434:	91 e0       	ldi	r25, 0x01	; 1
+ 436:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+
+uint8_t game_wait_for_player(void){
+	
+	while (1){
+		
+		for(uint8_t i = 1; i < 4; i++){
+ 43a:	cf 5f       	subi	r28, 0xFF	; 255
+ 43c:	c4 30       	cpi	r28, 0x04	; 4
+ 43e:	48 f3       	brcs	.-46     	; 0x412 <game_wait_for_player+0x6>
+ 440:	e6 cf       	rjmp	.-52     	; 0x40e <game_wait_for_player+0x2>
+			led(i, false);
+			wait(500);
+			
+			}		
+	}
+}
+ 442:	8c 2f       	mov	r24, r28
+ 444:	cf 91       	pop	r28
+ 446:	08 95       	ret
+
+Disassembly of section .text.game_wait_start:
+
+00000232 <game_wait_start>:
+
+void game_wait_start(uint8_t player_selected_led){
+ 232:	cf 93       	push	r28
+ 234:	df 93       	push	r29
+ 236:	c8 2f       	mov	r28, r24
+	
+	// Wait for player input to start game, light all three LEDs
+		wait(500);
+ 238:	84 ef       	ldi	r24, 0xF4	; 244
+ 23a:	91 e0       	ldi	r25, 0x01	; 1
+ 23c:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+		while(1){
+			led(0, false);
+ 240:	60 e0       	ldi	r22, 0x00	; 0
+ 242:	80 e0       	ldi	r24, 0x00	; 0
+ 244:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			if(wait_input(300, sw3)){
+ 248:	6a ee       	ldi	r22, 0xEA	; 234
+ 24a:	72 e0       	ldi	r23, 0x02	; 2
+ 24c:	8c e2       	ldi	r24, 0x2C	; 44
+ 24e:	91 e0       	ldi	r25, 0x01	; 1
+ 250:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 254:	81 11       	cpse	r24, r1
+ 256:	0c c0       	rjmp	.+24     	; 0x270 <game_wait_start+0x3e>
+				break;
+			}
+			led(player_selected_led, true);
+ 258:	61 e0       	ldi	r22, 0x01	; 1
+ 25a:	8c 2f       	mov	r24, r28
+ 25c:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			if(wait_input(300, sw3)){
+ 260:	6a ee       	ldi	r22, 0xEA	; 234
+ 262:	72 e0       	ldi	r23, 0x02	; 2
+ 264:	8c e2       	ldi	r24, 0x2C	; 44
+ 266:	91 e0       	ldi	r25, 0x01	; 1
+ 268:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 26c:	88 23       	and	r24, r24
+ 26e:	19 f0       	breq	.+6      	; 0x276 <game_wait_start+0x44>
+			
+			}		
+	}
+}
+
+void game_wait_start(uint8_t player_selected_led){
+ 270:	c0 e0       	ldi	r28, 0x00	; 0
+ 272:	d0 e0       	ldi	r29, 0x00	; 0
+ 274:	29 c0       	rjmp	.+82     	; 0x2c8 <game_wait_start+0x96>
+			}
+			led(player_selected_led, true);
+			if(wait_input(300, sw3)){
+				break;
+			}
+			led(player_selected_led, false);
+ 276:	60 e0       	ldi	r22, 0x00	; 0
+ 278:	8c 2f       	mov	r24, r28
+ 27a:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			if(wait_input(300, sw3)){
+ 27e:	6a ee       	ldi	r22, 0xEA	; 234
+ 280:	72 e0       	ldi	r23, 0x02	; 2
+ 282:	8c e2       	ldi	r24, 0x2C	; 44
+ 284:	91 e0       	ldi	r25, 0x01	; 1
+ 286:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 28a:	81 11       	cpse	r24, r1
+ 28c:	f1 cf       	rjmp	.-30     	; 0x270 <game_wait_start+0x3e>
+				break;
+			}
+			led(0, true);
+ 28e:	61 e0       	ldi	r22, 0x01	; 1
+ 290:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			if(wait_input(500, sw3)){
+ 294:	6a ee       	ldi	r22, 0xEA	; 234
+ 296:	72 e0       	ldi	r23, 0x02	; 2
+ 298:	84 ef       	ldi	r24, 0xF4	; 244
+ 29a:	91 e0       	ldi	r25, 0x01	; 1
+ 29c:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 2a0:	88 23       	and	r24, r24
+ 2a2:	71 f2       	breq	.-100    	; 0x240 <game_wait_start+0xe>
+ 2a4:	e5 cf       	rjmp	.-54     	; 0x270 <game_wait_start+0x3e>
+			}
+		}
+		
+		// Player started game, blink all LEDs
+		for(int i = 0; i < 3; i++){
+			led(0, false);
+ 2a6:	60 e0       	ldi	r22, 0x00	; 0
+ 2a8:	80 e0       	ldi	r24, 0x00	; 0
+ 2aa:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			wait(200);
+ 2ae:	88 ec       	ldi	r24, 0xC8	; 200
+ 2b0:	90 e0       	ldi	r25, 0x00	; 0
+ 2b2:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+			led(0, true);
+ 2b6:	61 e0       	ldi	r22, 0x01	; 1
+ 2b8:	80 e0       	ldi	r24, 0x00	; 0
+ 2ba:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			wait(200);
+ 2be:	88 ec       	ldi	r24, 0xC8	; 200
+ 2c0:	90 e0       	ldi	r25, 0x00	; 0
+ 2c2:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+				break;
+			}
+		}
+		
+		// Player started game, blink all LEDs
+		for(int i = 0; i < 3; i++){
+ 2c6:	21 96       	adiw	r28, 0x01	; 1
+ 2c8:	c3 30       	cpi	r28, 0x03	; 3
+ 2ca:	d1 05       	cpc	r29, r1
+ 2cc:	64 f3       	brlt	.-40     	; 0x2a6 <game_wait_start+0x74>
+			wait(200);
+			led(0, true);
+			wait(200);
+		}
+	
+}
+ 2ce:	df 91       	pop	r29
+ 2d0:	cf 91       	pop	r28
+ 2d2:	08 95       	ret
+
+Disassembly of section .text.game_loop:
+
+000000ce <game_loop>:
+
+void game_loop(uint8_t player_selected_led){
+  ce:	cf 92       	push	r12
+  d0:	df 92       	push	r13
+  d2:	ef 92       	push	r14
+  d4:	ff 92       	push	r15
+  d6:	0f 93       	push	r16
+  d8:	1f 93       	push	r17
+  da:	cf 93       	push	r28
+  dc:	df 93       	push	r29
+  de:	cd b7       	in	r28, 0x3d	; 61
+  e0:	de b7       	in	r29, 0x3e	; 62
+  e2:	64 97       	sbiw	r28, 0x14	; 20
+  e4:	0f b6       	in	r0, 0x3f	; 63
+  e6:	f8 94       	cli
+  e8:	de bf       	out	0x3e, r29	; 62
+  ea:	0f be       	out	0x3f, r0	; 63
+  ec:	cd bf       	out	0x3d, r28	; 61
+  ee:	c8 2e       	mov	r12, r24
+	
+	
+	uint16_t difficulty_levels[10] = {800, 600, 500, 400, 300, 200, 175, 150, 125, 100};
+  f0:	84 e1       	ldi	r24, 0x14	; 20
+  f2:	e4 e0       	ldi	r30, 0x04	; 4
+  f4:	f1 e0       	ldi	r31, 0x01	; 1
+  f6:	de 01       	movw	r26, r28
+  f8:	11 96       	adiw	r26, 0x01	; 1
+  fa:	01 90       	ld	r0, Z+
+  fc:	0d 92       	st	X+, r0
+  fe:	8a 95       	dec	r24
+ 100:	e1 f7       	brne	.-8      	; 0xfa <game_loop+0x2c>
+		
+	srand(time(0));
+ 102:	80 e0       	ldi	r24, 0x00	; 0
+ 104:	90 e0       	ldi	r25, 0x00	; 0
+ 106:	0e 94 4c 02 	call	0x498	; 0x498 <time>
+ 10a:	cb 01       	movw	r24, r22
+ 10c:	0e 94 da 02 	call	0x5b4	; 0x5b4 <srand>
+	
+	wait(500);
+ 110:	84 ef       	ldi	r24, 0xF4	; 244
+ 112:	91 e0       	ldi	r25, 0x01	; 1
+ 114:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wait>
+	
+	led(0, false);
+ 118:	60 e0       	ldi	r22, 0x00	; 0
+ 11a:	80 e0       	ldi	r24, 0x00	; 0
+ 11c:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+	
+	for(uint8_t curr_level = 0; curr_level < 10; curr_level++)
+ 120:	d1 2c       	mov	r13, r1
+ 122:	51 c0       	rjmp	.+162    	; 0x1c6 <game_loop+0xf8>
+	{			
+		while(1){
+
+			// blink one of the three LEDs
+			int random_led = (rand() % 3) + 1;
+ 124:	0e 94 e7 01 	call	0x3ce	; 0x3ce <rand>
+ 128:	63 e0       	ldi	r22, 0x03	; 3
+ 12a:	70 e0       	ldi	r23, 0x00	; 0
+ 12c:	0e 94 24 02 	call	0x448	; 0x448 <__divmodhi4>
+ 130:	8c 01       	movw	r16, r24
+ 132:	0f 5f       	subi	r16, 0xFF	; 255
+ 134:	1f 4f       	sbci	r17, 0xFF	; 255
+			led(random_led, true);
+ 136:	61 e0       	ldi	r22, 0x01	; 1
+ 138:	80 2f       	mov	r24, r16
+ 13a:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			
+			// give player time according to difficulty to select the LED
+			if(wait_input(difficulty_levels[curr_level], sw1)){
+ 13e:	ed 2d       	mov	r30, r13
+ 140:	f0 e0       	ldi	r31, 0x00	; 0
+ 142:	ee 0f       	add	r30, r30
+ 144:	ff 1f       	adc	r31, r31
+ 146:	81 e0       	ldi	r24, 0x01	; 1
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+ 14a:	8c 0f       	add	r24, r28
+ 14c:	9d 1f       	adc	r25, r29
+ 14e:	e8 0f       	add	r30, r24
+ 150:	f9 1f       	adc	r31, r25
+ 152:	e0 80       	ld	r14, Z
+ 154:	f1 80       	ldd	r15, Z+1	; 0x01
+ 156:	64 ee       	ldi	r22, 0xE4	; 228
+ 158:	72 e0       	ldi	r23, 0x02	; 2
+ 15a:	c7 01       	movw	r24, r14
+ 15c:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 160:	88 23       	and	r24, r24
+ 162:	99 f0       	breq	.+38     	; 0x18a <game_loop+0xbc>
+				if(random_led != player_selected_led){
+ 164:	8c 2d       	mov	r24, r12
+ 166:	90 e0       	ldi	r25, 0x00	; 0
+ 168:	08 17       	cp	r16, r24
+ 16a:	19 07       	cpc	r17, r25
+ 16c:	39 f0       	breq	.+14     	; 0x17c <game_loop+0xae>
+					blink_led(1, 3, 300);
+ 16e:	4c e2       	ldi	r20, 0x2C	; 44
+ 170:	51 e0       	ldi	r21, 0x01	; 1
+ 172:	63 e0       	ldi	r22, 0x03	; 3
+ 174:	81 e0       	ldi	r24, 0x01	; 1
+ 176:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+					return;
+ 17a:	4c c0       	rjmp	.+152    	; 0x214 <game_loop+0x146>
+				}
+				else{
+					blink_led(2, 3, 300);
+ 17c:	4c e2       	ldi	r20, 0x2C	; 44
+ 17e:	51 e0       	ldi	r21, 0x01	; 1
+ 180:	63 e0       	ldi	r22, 0x03	; 3
+ 182:	82 e0       	ldi	r24, 0x02	; 2
+ 184:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+					break;
+ 188:	1d c0       	rjmp	.+58     	; 0x1c4 <game_loop+0xf6>
+				}
+			}
+			
+			led(random_led, false);
+ 18a:	60 e0       	ldi	r22, 0x00	; 0
+ 18c:	80 2f       	mov	r24, r16
+ 18e:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			if(wait_input(difficulty_levels[curr_level], sw1)){
+ 192:	64 ee       	ldi	r22, 0xE4	; 228
+ 194:	72 e0       	ldi	r23, 0x02	; 2
+ 196:	c7 01       	movw	r24, r14
+ 198:	0e 94 c8 01 	call	0x390	; 0x390 <wait_input>
+ 19c:	88 23       	and	r24, r24
+ 19e:	11 f2       	breq	.-124    	; 0x124 <game_loop+0x56>
+				if(random_led != player_selected_led){
+ 1a0:	8c 2d       	mov	r24, r12
+ 1a2:	90 e0       	ldi	r25, 0x00	; 0
+ 1a4:	08 17       	cp	r16, r24
+ 1a6:	19 07       	cpc	r17, r25
+ 1a8:	39 f0       	breq	.+14     	; 0x1b8 <game_loop+0xea>
+					blink_led(1, 3, 150);
+ 1aa:	46 e9       	ldi	r20, 0x96	; 150
+ 1ac:	50 e0       	ldi	r21, 0x00	; 0
+ 1ae:	63 e0       	ldi	r22, 0x03	; 3
+ 1b0:	81 e0       	ldi	r24, 0x01	; 1
+ 1b2:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+					return;
+ 1b6:	2e c0       	rjmp	.+92     	; 0x214 <game_loop+0x146>
+				}
+				else{
+					blink_led(2, 3, 150);
+ 1b8:	46 e9       	ldi	r20, 0x96	; 150
+ 1ba:	50 e0       	ldi	r21, 0x00	; 0
+ 1bc:	63 e0       	ldi	r22, 0x03	; 3
+ 1be:	82 e0       	ldi	r24, 0x02	; 2
+ 1c0:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+	
+	wait(500);
+	
+	led(0, false);
+	
+	for(uint8_t curr_level = 0; curr_level < 10; curr_level++)
+ 1c4:	d3 94       	inc	r13
+ 1c6:	99 e0       	ldi	r25, 0x09	; 9
+ 1c8:	9d 15       	cp	r25, r13
+ 1ca:	08 f0       	brcs	.+2      	; 0x1ce <game_loop+0x100>
+ 1cc:	ab cf       	rjmp	.-170    	; 0x124 <game_loop+0x56>
+ 1ce:	00 e0       	ldi	r16, 0x00	; 0
+ 1d0:	1f c0       	rjmp	.+62     	; 0x210 <game_loop+0x142>
+	}
+	
+	//victory!
+	for (uint8_t i = 0; i < 3; i++){
+		for(uint8_t j = 1; j < 4; j++){
+			led(0,false);
+ 1d2:	60 e0       	ldi	r22, 0x00	; 0
+ 1d4:	80 e0       	ldi	r24, 0x00	; 0
+ 1d6:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			blink_led(j, 1, 300);
+ 1da:	4c e2       	ldi	r20, 0x2C	; 44
+ 1dc:	51 e0       	ldi	r21, 0x01	; 1
+ 1de:	61 e0       	ldi	r22, 0x01	; 1
+ 1e0:	81 2f       	mov	r24, r17
+ 1e2:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+		}
+	}
+	
+	//victory!
+	for (uint8_t i = 0; i < 3; i++){
+		for(uint8_t j = 1; j < 4; j++){
+ 1e6:	1f 5f       	subi	r17, 0xFF	; 255
+ 1e8:	01 c0       	rjmp	.+2      	; 0x1ec <game_loop+0x11e>
+ 1ea:	11 e0       	ldi	r17, 0x01	; 1
+ 1ec:	14 30       	cpi	r17, 0x04	; 4
+ 1ee:	88 f3       	brcs	.-30     	; 0x1d2 <game_loop+0x104>
+ 1f0:	13 e0       	ldi	r17, 0x03	; 3
+ 1f2:	0b c0       	rjmp	.+22     	; 0x20a <game_loop+0x13c>
+			led(0,false);
+			blink_led(j, 1, 300);
+		}
+		for(uint8_t k = 3; k > 0; k--){
+			led(0,false);
+ 1f4:	60 e0       	ldi	r22, 0x00	; 0
+ 1f6:	80 e0       	ldi	r24, 0x00	; 0
+ 1f8:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <led>
+			blink_led(k, 1, 300);
+ 1fc:	4c e2       	ldi	r20, 0x2C	; 44
+ 1fe:	51 e0       	ldi	r21, 0x01	; 1
+ 200:	61 e0       	ldi	r22, 0x01	; 1
+ 202:	81 2f       	mov	r24, r17
+ 204:	0e 94 a3 01 	call	0x346	; 0x346 <blink_led>
+	for (uint8_t i = 0; i < 3; i++){
+		for(uint8_t j = 1; j < 4; j++){
+			led(0,false);
+			blink_led(j, 1, 300);
+		}
+		for(uint8_t k = 3; k > 0; k--){
+ 208:	11 50       	subi	r17, 0x01	; 1
+ 20a:	11 11       	cpse	r17, r1
+ 20c:	f3 cf       	rjmp	.-26     	; 0x1f4 <game_loop+0x126>
+			}
+		}
+	}
+	
+	//victory!
+	for (uint8_t i = 0; i < 3; i++){
+ 20e:	0f 5f       	subi	r16, 0xFF	; 255
+ 210:	03 30       	cpi	r16, 0x03	; 3
+ 212:	58 f3       	brcs	.-42     	; 0x1ea <game_loop+0x11c>
+		for(uint8_t k = 3; k > 0; k--){
+			led(0,false);
+			blink_led(k, 1, 300);
+		}
+	}
+}
+ 214:	64 96       	adiw	r28, 0x14	; 20
+ 216:	0f b6       	in	r0, 0x3f	; 63
+ 218:	f8 94       	cli
+ 21a:	de bf       	out	0x3e, r29	; 62
+ 21c:	0f be       	out	0x3f, r0	; 63
+ 21e:	cd bf       	out	0x3d, r28	; 61
+ 220:	df 91       	pop	r29
+ 222:	cf 91       	pop	r28
+ 224:	1f 91       	pop	r17
+ 226:	0f 91       	pop	r16
+ 228:	ff 90       	pop	r15
+ 22a:	ef 90       	pop	r14
+ 22c:	df 90       	pop	r13
+ 22e:	cf 90       	pop	r12
+ 230:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000536 <main>:
+
+int main(void)
+{
+    /*Use either setup_p0 OR setup_p1*/
+    //setup_p0();
+    setup_p1();
+ 536:	0e 94 5d 02 	call	0x4ba	; 0x4ba <setup_p1>
+    while(1) {
+		
+		uint8_t selected_led = game_wait_for_player();
+ 53a:	0e 94 06 02 	call	0x40c	; 0x40c <game_wait_for_player>
+ 53e:	c8 2f       	mov	r28, r24
+		game_wait_start(selected_led);
+ 540:	0e 94 19 01 	call	0x232	; 0x232 <game_wait_start>
+		game_loop(selected_led);
+ 544:	8c 2f       	mov	r24, r28
+ 546:	0e 94 67 00 	call	0xce	; 0xce <__data_load_end>
+ 54a:	f7 cf       	rjmp	.-18     	; 0x53a <main+0x4>
+
+Disassembly of section .text.wait:
+
+000004fa <wait>:
+ 4fa:	20 e0       	ldi	r18, 0x00	; 0
+ 4fc:	30 e0       	ldi	r19, 0x00	; 0
+ 4fe:	08 c0       	rjmp	.+16     	; 0x510 <wait+0x16>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 500:	ef e9       	ldi	r30, 0x9F	; 159
+ 502:	ff e0       	ldi	r31, 0x0F	; 15
+ 504:	31 97       	sbiw	r30, 0x01	; 1
+ 506:	f1 f7       	brne	.-4      	; 0x504 <wait+0xa>
+ 508:	00 c0       	rjmp	.+0      	; 0x50a <wait+0x10>
+ 50a:	00 00       	nop
+ 50c:	2f 5f       	subi	r18, 0xFF	; 255
+ 50e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 510:	28 17       	cp	r18, r24
+ 512:	39 07       	cpc	r19, r25
+ 514:	a8 f3       	brcs	.-22     	; 0x500 <wait+0x6>
+ 516:	08 95       	ret
+
+Disassembly of section .text.sw1:
+
+000005c8 <sw1>:
+ 5c8:	18 9b       	sbis	0x03, 0	; 3
+ 5ca:	02 c0       	rjmp	.+4      	; 0x5d0 <sw1+0x8>
+ 5cc:	81 e0       	ldi	r24, 0x01	; 1
+ 5ce:	08 95       	ret
+ 5d0:	80 e0       	ldi	r24, 0x00	; 0
+ 5d2:	08 95       	ret
+
+Disassembly of section .text.sw3:
+
+000005d4 <sw3>:
+ 5d4:	4c 9b       	sbis	0x09, 4	; 9
+ 5d6:	02 c0       	rjmp	.+4      	; 0x5dc <sw3+0x8>
+ 5d8:	81 e0       	ldi	r24, 0x01	; 1
+ 5da:	08 95       	ret
+ 5dc:	80 e0       	ldi	r24, 0x00	; 0
+ 5de:	08 95       	ret
+
+Disassembly of section .text.led1:
+
+00000578 <led1>:
+ 578:	88 23       	and	r24, r24
+ 57a:	21 f0       	breq	.+8      	; 0x584 <led1+0xc>
+ 57c:	85 b1       	in	r24, 0x05	; 5
+ 57e:	82 60       	ori	r24, 0x02	; 2
+ 580:	85 b9       	out	0x05, r24	; 5
+ 582:	08 95       	ret
+ 584:	85 b1       	in	r24, 0x05	; 5
+ 586:	8d 7f       	andi	r24, 0xFD	; 253
+ 588:	85 b9       	out	0x05, r24	; 5
+ 58a:	08 95       	ret
+
+Disassembly of section .text.led2:
+
+0000058c <led2>:
+ 58c:	88 23       	and	r24, r24
+ 58e:	21 f0       	breq	.+8      	; 0x598 <led2+0xc>
+ 590:	8b b1       	in	r24, 0x0b	; 11
+ 592:	80 64       	ori	r24, 0x40	; 64
+ 594:	8b b9       	out	0x0b, r24	; 11
+ 596:	08 95       	ret
+ 598:	8b b1       	in	r24, 0x0b	; 11
+ 59a:	8f 7b       	andi	r24, 0xBF	; 191
+ 59c:	8b b9       	out	0x0b, r24	; 11
+ 59e:	08 95       	ret
+
+Disassembly of section .text.led3:
+
+000005a0 <led3>:
+ 5a0:	88 23       	and	r24, r24
+ 5a2:	21 f0       	breq	.+8      	; 0x5ac <led3+0xc>
+ 5a4:	8b b1       	in	r24, 0x0b	; 11
+ 5a6:	80 62       	ori	r24, 0x20	; 32
+ 5a8:	8b b9       	out	0x0b, r24	; 11
+ 5aa:	08 95       	ret
+ 5ac:	8b b1       	in	r24, 0x0b	; 11
+ 5ae:	8f 7d       	andi	r24, 0xDF	; 223
+ 5b0:	8b b9       	out	0x0b, r24	; 11
+ 5b2:	08 95       	ret
+
+Disassembly of section .text.led:
+
+000002d4 <led>:
+ 2d4:	66 23       	and	r22, r22
+ 2d6:	d9 f0       	breq	.+54     	; 0x30e <led+0x3a>
+ 2d8:	81 30       	cpi	r24, 0x01	; 1
+ 2da:	19 f4       	brne	.+6      	; 0x2e2 <led+0xe>
+ 2dc:	0e 94 bc 02 	call	0x578	; 0x578 <led1>
+ 2e0:	08 95       	ret
+ 2e2:	82 30       	cpi	r24, 0x02	; 2
+ 2e4:	21 f4       	brne	.+8      	; 0x2ee <led+0x1a>
+ 2e6:	81 e0       	ldi	r24, 0x01	; 1
+ 2e8:	0e 94 c6 02 	call	0x58c	; 0x58c <led2>
+ 2ec:	08 95       	ret
+ 2ee:	83 30       	cpi	r24, 0x03	; 3
+ 2f0:	21 f4       	brne	.+8      	; 0x2fa <led+0x26>
+ 2f2:	81 e0       	ldi	r24, 0x01	; 1
+ 2f4:	0e 94 d0 02 	call	0x5a0	; 0x5a0 <led3>
+ 2f8:	08 95       	ret
+ 2fa:	81 e0       	ldi	r24, 0x01	; 1
+ 2fc:	0e 94 bc 02 	call	0x578	; 0x578 <led1>
+ 300:	81 e0       	ldi	r24, 0x01	; 1
+ 302:	0e 94 c6 02 	call	0x58c	; 0x58c <led2>
+ 306:	81 e0       	ldi	r24, 0x01	; 1
+ 308:	0e 94 d0 02 	call	0x5a0	; 0x5a0 <led3>
+ 30c:	08 95       	ret
+ 30e:	81 30       	cpi	r24, 0x01	; 1
+ 310:	21 f4       	brne	.+8      	; 0x31a <led+0x46>
+ 312:	80 e0       	ldi	r24, 0x00	; 0
+ 314:	0e 94 bc 02 	call	0x578	; 0x578 <led1>
+ 318:	08 95       	ret
+ 31a:	82 30       	cpi	r24, 0x02	; 2
+ 31c:	21 f4       	brne	.+8      	; 0x326 <led+0x52>
+ 31e:	80 e0       	ldi	r24, 0x00	; 0
+ 320:	0e 94 c6 02 	call	0x58c	; 0x58c <led2>
+ 324:	08 95       	ret
+ 326:	83 30       	cpi	r24, 0x03	; 3
+ 328:	21 f4       	brne	.+8      	; 0x332 <led+0x5e>
+ 32a:	80 e0       	ldi	r24, 0x00	; 0
+ 32c:	0e 94 d0 02 	call	0x5a0	; 0x5a0 <led3>
+ 330:	08 95       	ret
+ 332:	80 e0       	ldi	r24, 0x00	; 0
+ 334:	0e 94 bc 02 	call	0x578	; 0x578 <led1>
+ 338:	80 e0       	ldi	r24, 0x00	; 0
+ 33a:	0e 94 c6 02 	call	0x58c	; 0x58c <led2>
+ 33e:	80 e0       	ldi	r24, 0x00	; 0
+ 340:	0e 94 d0 02 	call	0x5a0	; 0x5a0 <led3>
+ 344:	08 95       	ret
+
+Disassembly of section .text.setup_p1:
+
+000004ba <setup_p1>:
+ 4ba:	82 e0       	ldi	r24, 0x02	; 2
+ 4bc:	84 b9       	out	0x04, r24	; 4
+ 4be:	88 e0       	ldi	r24, 0x08	; 8
+ 4c0:	87 b9       	out	0x07, r24	; 7
+ 4c2:	8a b1       	in	r24, 0x0a	; 10
+ 4c4:	8f 77       	andi	r24, 0x7F	; 127
+ 4c6:	8a b9       	out	0x0a, r24	; 10
+ 4c8:	8a b1       	in	r24, 0x0a	; 10
+ 4ca:	8f 7e       	andi	r24, 0xEF	; 239
+ 4cc:	8a b9       	out	0x0a, r24	; 10
+ 4ce:	8f e6       	ldi	r24, 0x6F	; 111
+ 4d0:	8a b9       	out	0x0a, r24	; 10
+ 4d2:	8b b1       	in	r24, 0x0b	; 11
+ 4d4:	8f 60       	ori	r24, 0x0F	; 15
+ 4d6:	8b b9       	out	0x0b, r24	; 11
+ 4d8:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00000448 <__divmodhi4>:
+ 448:	97 fb       	bst	r25, 7
+ 44a:	07 2e       	mov	r0, r23
+ 44c:	16 f4       	brtc	.+4      	; 0x452 <__divmodhi4+0xa>
+ 44e:	00 94       	com	r0
+ 450:	07 d0       	rcall	.+14     	; 0x460 <__divmodhi4_neg1>
+ 452:	77 fd       	sbrc	r23, 7
+ 454:	09 d0       	rcall	.+18     	; 0x468 <__divmodhi4_neg2>
+ 456:	0e 94 38 02 	call	0x470	; 0x470 <__udivmodhi4>
+ 45a:	07 fc       	sbrc	r0, 7
+ 45c:	05 d0       	rcall	.+10     	; 0x468 <__divmodhi4_neg2>
+ 45e:	3e f4       	brtc	.+14     	; 0x46e <__divmodhi4_exit>
+
+00000460 <__divmodhi4_neg1>:
+ 460:	90 95       	com	r25
+ 462:	81 95       	neg	r24
+ 464:	9f 4f       	sbci	r25, 0xFF	; 255
+ 466:	08 95       	ret
+
+00000468 <__divmodhi4_neg2>:
+ 468:	70 95       	com	r23
+ 46a:	61 95       	neg	r22
+ 46c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000046e <__divmodhi4_exit>:
+ 46e:	08 95       	ret
+
+Disassembly of section .text.libgcc.div:
+
+00000470 <__udivmodhi4>:
+ 470:	aa 1b       	sub	r26, r26
+ 472:	bb 1b       	sub	r27, r27
+ 474:	51 e1       	ldi	r21, 0x11	; 17
+ 476:	07 c0       	rjmp	.+14     	; 0x486 <__udivmodhi4_ep>
+
+00000478 <__udivmodhi4_loop>:
+ 478:	aa 1f       	adc	r26, r26
+ 47a:	bb 1f       	adc	r27, r27
+ 47c:	a6 17       	cp	r26, r22
+ 47e:	b7 07       	cpc	r27, r23
+ 480:	10 f0       	brcs	.+4      	; 0x486 <__udivmodhi4_ep>
+ 482:	a6 1b       	sub	r26, r22
+ 484:	b7 0b       	sbc	r27, r23
+
+00000486 <__udivmodhi4_ep>:
+ 486:	88 1f       	adc	r24, r24
+ 488:	99 1f       	adc	r25, r25
+ 48a:	5a 95       	dec	r21
+ 48c:	a9 f7       	brne	.-22     	; 0x478 <__udivmodhi4_loop>
+ 48e:	80 95       	com	r24
+ 490:	90 95       	com	r25
+ 492:	bc 01       	movw	r22, r24
+ 494:	cd 01       	movw	r24, r26
+ 496:	08 95       	ret
+
+Disassembly of section .text.__dummy_fini:
+
+000005e8 <_fini>:
+ 5e8:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000005ea <__funcs_on_exit>:
+ 5ea:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000005ec <__simulator_exit>:
+ 5ec:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+0000054c <exit>:
+ 54c:	ec 01       	movw	r28, r24
+ 54e:	0e 94 f5 02 	call	0x5ea	; 0x5ea <__funcs_on_exit>
+ 552:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <_fini>
+ 556:	ce 01       	movw	r24, r28
+ 558:	0e 94 f6 02 	call	0x5ec	; 0x5ec <__simulator_exit>
+ 55c:	ce 01       	movw	r24, r28
+ 55e:	0e 94 f2 02 	call	0x5e4	; 0x5e4 <_Exit>
+
+Disassembly of section .text.srand:
+
+000005b4 <srand>:
+ 5b4:	01 97       	sbiw	r24, 0x01	; 1
+ 5b6:	a0 e0       	ldi	r26, 0x00	; 0
+ 5b8:	b0 e0       	ldi	r27, 0x00	; 0
+ 5ba:	e8 e1       	ldi	r30, 0x18	; 24
+ 5bc:	f1 e0       	ldi	r31, 0x01	; 1
+ 5be:	80 83       	st	Z, r24
+ 5c0:	91 83       	std	Z+1, r25	; 0x01
+ 5c2:	a2 83       	std	Z+2, r26	; 0x02
+ 5c4:	b3 83       	std	Z+3, r27	; 0x03
+ 5c6:	08 95       	ret
+
+Disassembly of section .text.rand:
+
+000003ce <rand>:
+ 3ce:	e8 e1       	ldi	r30, 0x18	; 24
+ 3d0:	f1 e0       	ldi	r31, 0x01	; 1
+ 3d2:	20 81       	ld	r18, Z
+ 3d4:	31 81       	ldd	r19, Z+1	; 0x01
+ 3d6:	42 81       	ldd	r20, Z+2	; 0x02
+ 3d8:	53 81       	ldd	r21, Z+3	; 0x03
+ 3da:	6d e2       	ldi	r22, 0x2D	; 45
+ 3dc:	7f e7       	ldi	r23, 0x7F	; 127
+ 3de:	85 e9       	ldi	r24, 0x95	; 149
+ 3e0:	9c e4       	ldi	r25, 0x4C	; 76
+ 3e2:	0e 94 6d 02 	call	0x4da	; 0x4da <__mulsi3>
+ 3e6:	dc 01       	movw	r26, r24
+ 3e8:	cb 01       	movw	r24, r22
+ 3ea:	01 96       	adiw	r24, 0x01	; 1
+ 3ec:	a1 1d       	adc	r26, r1
+ 3ee:	b1 1d       	adc	r27, r1
+ 3f0:	e8 e1       	ldi	r30, 0x18	; 24
+ 3f2:	f1 e0       	ldi	r31, 0x01	; 1
+ 3f4:	80 83       	st	Z, r24
+ 3f6:	91 83       	std	Z+1, r25	; 0x01
+ 3f8:	a2 83       	std	Z+2, r26	; 0x02
+ 3fa:	b3 83       	std	Z+3, r27	; 0x03
+ 3fc:	f1 e1       	ldi	r31, 0x11	; 17
+ 3fe:	b6 95       	lsr	r27
+ 400:	a7 95       	ror	r26
+ 402:	97 95       	ror	r25
+ 404:	87 95       	ror	r24
+ 406:	fa 95       	dec	r31
+ 408:	d1 f7       	brne	.-12     	; 0x3fe <rand+0x30>
+ 40a:	08 95       	ret
+
+Disassembly of section .text.time:
+
+00000498 <time>:
+ 498:	fc 01       	movw	r30, r24
+ 49a:	0f b6       	in	r0, 0x3f	; 63
+ 49c:	f8 94       	cli
+ 49e:	a0 e0       	ldi	r26, 0x00	; 0
+ 4a0:	b1 e0       	ldi	r27, 0x01	; 1
+ 4a2:	6d 91       	ld	r22, X+
+ 4a4:	7d 91       	ld	r23, X+
+ 4a6:	8d 91       	ld	r24, X+
+ 4a8:	9c 91       	ld	r25, X
+ 4aa:	0f be       	out	0x3f, r0	; 63
+ 4ac:	30 97       	sbiw	r30, 0x00	; 0
+ 4ae:	21 f0       	breq	.+8      	; 0x4b8 <time+0x20>
+ 4b0:	60 83       	st	Z, r22
+ 4b2:	71 83       	std	Z+1, r23	; 0x01
+ 4b4:	82 83       	std	Z+2, r24	; 0x02
+ 4b6:	93 83       	std	Z+3, r25	; 0x03
+ 4b8:	08 95       	ret
+
+Disassembly of section .text._Exit:
+
+000005e4 <_Exit>:
+ 5e4:	0e 94 65 00 	call	0xca	; 0xca <_exit>
+
+Disassembly of section .text.libgcc.mul:
+
+000004da <__mulsi3>:
+ 4da:	db 01       	movw	r26, r22
+ 4dc:	8f 93       	push	r24
+ 4de:	9f 93       	push	r25
+ 4e0:	0e 94 b1 02 	call	0x562	; 0x562 <__muluhisi3>
+ 4e4:	bf 91       	pop	r27
+ 4e6:	af 91       	pop	r26
+ 4e8:	a2 9f       	mul	r26, r18
+ 4ea:	80 0d       	add	r24, r0
+ 4ec:	91 1d       	adc	r25, r1
+ 4ee:	a3 9f       	mul	r26, r19
+ 4f0:	90 0d       	add	r25, r0
+ 4f2:	b2 9f       	mul	r27, r18
+ 4f4:	90 0d       	add	r25, r0
+ 4f6:	11 24       	eor	r1, r1
+ 4f8:	08 95       	ret
+
+Disassembly of section .text.libgcc.mul:
+
+00000562 <__muluhisi3>:
+ 562:	0e 94 8c 02 	call	0x518	; 0x518 <__umulhisi3>
+ 566:	a5 9f       	mul	r26, r21
+ 568:	90 0d       	add	r25, r0
+ 56a:	b4 9f       	mul	r27, r20
+ 56c:	90 0d       	add	r25, r0
+ 56e:	a4 9f       	mul	r26, r20
+ 570:	80 0d       	add	r24, r0
+ 572:	91 1d       	adc	r25, r1
+ 574:	11 24       	eor	r1, r1
+ 576:	08 95       	ret
+
+Disassembly of section .text.libgcc.mul:
+
+00000518 <__umulhisi3>:
+ 518:	a2 9f       	mul	r26, r18
+ 51a:	b0 01       	movw	r22, r0
+ 51c:	b3 9f       	mul	r27, r19
+ 51e:	c0 01       	movw	r24, r0
+ 520:	a3 9f       	mul	r26, r19
+ 522:	70 0d       	add	r23, r0
+ 524:	81 1d       	adc	r24, r1
+ 526:	11 24       	eor	r1, r1
+ 528:	91 1d       	adc	r25, r1
+ 52a:	b2 9f       	mul	r27, r18
+ 52c:	70 0d       	add	r23, r0
+ 52e:	81 1d       	adc	r24, r1
+ 530:	11 24       	eor	r1, r1
+ 532:	91 1d       	adc	r25, r1
+ 534:	08 95       	ret

@@ -1,0 +1,34 @@
+﻿------ Build started: Project: yrgo, Configuration: Debug AVR ------
+Build started.
+Project "yrgo.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\joela\repos\programmeringsmetodik-ee15h25\P1 tomt projekt ver1.3\yrgo\yrgo\yrgo.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 8 --output-sync 
+		Building file: .././main.c
+		Invoking: XC8 C Compiler : 2.36
+		"C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe"  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" ".././main.c" 
+		Finished building: .././main.c
+		Building target: yrgo.elf
+		Invoking:  XC8 C Linker : 2.36
+		"C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe" -o yrgo.elf  main.o P0/p0.o P1/adc.o P1/bcd.o P1/Button.o P1/LED.o P1/p1.o P1/relay.o   -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -Wl,-Map="yrgo.map" -funsigned-char -funsigned-bitfields -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums --memorysummary,memoryfile.xml  
+		Info: Loading file: c:\program files\microchip\xc8\v2.36\avr\avr\bin\../lib\ldscripts/avr5.xn
+		Finished building target: yrgo.elf
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "yrgo.elf" "yrgo.hex"
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O ihex "yrgo.elf" "yrgo.eep" || exit 0
+		"C:\Program Files\Microchip\xc8\v2.36\bin\avr-objdump.exe" -h -S "yrgo.elf" > "yrgo.lss"
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	1538 bytes   4,7 % Full
+				Data Memory Usage 		:	28 bytes   1,4 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "yrgo.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\joela\repos\programmeringsmetodik-ee15h25\P1 tomt projekt ver1.3\yrgo\yrgo\yrgo.cproj" (entry point):
+Done building target "Build" in project "yrgo.cproj".
+Done building project "yrgo.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
