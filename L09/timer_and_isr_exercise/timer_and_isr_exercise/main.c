@@ -7,6 +7,9 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "gpio.h"
+
+
 
 void init_timer(){
 
@@ -18,19 +21,19 @@ void init_timer(){
 
 int main(void)
 {
-
-	DDRB |= (1<<PORTB2); /* Enable output on pin d2 */
-	
+	gpio_set_direction(4, OUTPUT);
 	/* OCF0A Flag getting set when counter reaches 0x7D */
 	init_timer();
 
+	
     /* Replace with your application code */
+
+	uint16_t counter = 0;
+
     while (1) 
     {
-		uint8_t counter_flag = TIFR0 & (1 << OCF0A);
 		
-	
-		
+		if(TIFR0 & (1 << OCF0A
+		}
     }
 }
-
