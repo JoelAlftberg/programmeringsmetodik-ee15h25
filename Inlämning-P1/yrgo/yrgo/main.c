@@ -6,65 +6,77 @@
 int main(void)
 {
 
-    uint8_t led_number = 1;
-    uint16_t led_timer = 0;
-    uint16_t pot_timer = 0;
-    uint8_t duty_cycle = 0;
-    uint16_t delay = 0;
-    uint16_t intensity = 0;
+    /*Deklarerar statusvariabler som håller koll på knappens aktuella status*/
 
     setup_p1();
     
-    while (1){
+    bool switch1_pressed = false;
+    bool switch1_toggle_status = false;
+    bool switch2_pressed = false;
+    bool switch2_toggle_status = false;
+    bool switch3_pressed = false;
+    bool switch3_toggle_status = false;
+    uint8_t number = 0;
 
-        led_timer++;
-        pot_timer++;
+    while(1) {
         
-        if (pot_timer >= 1500){
-
-            delay = 50 * read_pot1();
-            intensity = read_pot2() / 10;
-
-            /* Clamp intensity so that duty cycle never goes over 100% */
-            if (intensity > 100){
-                intensity = 100;
-            }
-
-            pot_timer = 0;
+        /*Hanterar toggelfunktion för switch 1*/
+        if(sw1() && !switch1_pressed){
+            /*Inverterar värdet på variabeln switch1_toggle_status */
+            switch1_toggle_status = !switch1_toggle_status;
+            switch1_pressed = true;
+            number++;
 
         }
-        
-        if (!sw3()){
-            
-            /* PWM */
-            duty_cycle < intensity ? led(led_number, true) : led(led_number, false);
-            duty_cycle++;
-            
-            if (duty_cycle >= 100){
-                duty_cycle = 0;
-            }
-            
+        else if(!sw1() && switch1_pressed){
+            switch1_pressed = false;
         }
 
-        /* LED cycling */
-        if (!sw1() && led_timer >= delay){
-            
-            led(0, false);
-
-            sw2() ? led_number-- : led_number++;
-
-            if (led_number > 3){
-                led_number = 1;
+        /*Hanterar toggelfunktion för switch 2*/
+        if(sw2() && !switch2_pressed){
+            _delay_us(50);
+            if(sw2()){
+                /*Inverterar värdet på variabeln switch2_toggle_status */
+                switch2_toggle_status = !switch2_toggle_status;
+                switch2_pressed = true;
+                number++;
             }
-            else if (led_number < 1){
-                led_number = 3;
+            else{
+                _delay_us(50);
             }
+        }
+        else if(!sw2() && switch2_pressed){
+            switch2_pressed = false;
+            _delay_us(300);
+        }
 
-            led_timer = 0;
-            
+        if(sw3() && !switch3_pressed){
+            _delay_us(50);
+            /*Inverterar värdet på variabeln switch2_toggle_status */
+            if(sw3()){
+                switch3_toggle_status = !switch3_toggle_status;
+                switch3_pressed = true;
+                number++;   
+            }
+            else{
+                _delay_us(50);  
+            }            
+        }
+        else if(!sw3() && switch3_pressed){
+            switch3_pressed = false;
+            _delay_us(300);
         }
         
-        _delay_us(20);
-        
-    }
+        /*Tänder LED varannan gång man trycker på sw1 och 2*/
+        led1(switch1_toggle_status);
+        led2(switch2_toggle_status);
+        led3(switch3_toggle_status);
+        set_number(number);
+        if (number > 9){
+            number = 0;
+        }         
+
+     
+     }            
+
 }
