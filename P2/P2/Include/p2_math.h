@@ -12,7 +12,7 @@
 
 #define REF_RESISTOR_LOW 330U
 #define REF_RESISTOR_HIGH 33000U
-
+#define HIGH_VOLTAGE_DIVIDER 7
 
 uint16_t round_to_hundredth(uint16_t decimal_part);
 uint16_t round_to_tenth(uint16_t decimal_part);

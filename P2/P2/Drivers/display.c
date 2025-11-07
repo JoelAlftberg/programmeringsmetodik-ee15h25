@@ -25,8 +25,8 @@
 #include "../include/p2_math.h"
 #include <avr/delay.h>
 
-digit_pos_t digit_pins[3] = {digit_1, digit_2, digit_3};
-uint16_t display_buffer[3] = {0, 0, 0};
+digit_pos_t digit_pins[3] = {digit_1_pin, digit_2_pin, digit_3_pin};
+uint16_t display_buffer[4] = {0, 0, 0, 0};
 
 void display_digit(uint8_t digit, digit_pos_t digit_pos, uint8_t decimal_point){
     
