@@ -95,12 +95,14 @@ void resistance_update_buffer(uint32_t resistance){
 
     bool rounding = true;
 
-    if (resistance == 0){
+    if (resistance == 0 || resistance > 1000000){
         display_buffer[0] = 0;
         display_buffer[1] = 0;
         display_buffer[2] = 0;
         display_buffer[3] = 3;
+        return;
     }
+
     /* 0-10 ohm */
     if (factor_flag){
         if (resistance < 1000){
@@ -118,6 +120,7 @@ void resistance_update_buffer(uint32_t resistance){
             display_buffer[1] = 0;
             display_buffer[2] = 0;
             display_buffer[3] = 3;
+            return;
         }
     }
     else{
@@ -141,12 +144,6 @@ void resistance_update_buffer(uint32_t resistance){
         else if (resistance < 1000000){
             factor_1 = 100000;
             decimal_point = 2;
-        }
-        else if (resistance > 1000000){
-            display_buffer[0] = 1;
-            display_buffer[1] = 0;
-            display_buffer[2] = 0;
-            display_buffer[3] = 3;
         }
     }
 

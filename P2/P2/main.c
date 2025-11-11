@@ -38,8 +38,6 @@ int main(void)
     while(1){
         
         if(timer_counter >= 2000){
-            /* float voltage = voltage_mode_upper_range();
-            display_buffer_update(voltage);*/
             uint16_t raw = read_analog_adc(A0);
             display_buffer_update(raw);
             timer_counter = 0;  
@@ -57,7 +55,7 @@ int main(void)
         
         timer_counter++;
         display_timer_counter++;
-        _delay_us(500);
+        _delay_us(100);
     }
         
         

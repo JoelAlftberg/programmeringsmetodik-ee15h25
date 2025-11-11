@@ -47,7 +47,7 @@ void display_digit(uint8_t digit, digit_pos_t digit_pos, uint8_t decimal_point){
     
 }
 
-void display_code(display_code_t code){
+void code_update_buffer(display_code_t code){
     
     if(code == error){
         
@@ -62,72 +62,6 @@ array with the value rounded and converted to a suitable format for a 3-digit di
 
 */
 
-void prepare_for_buffer(uint32_t number){
-    
-}
-
-void display_buffer_update(uint32_t number){
-
-    uint16_t num_decimal_part = 0;
-
-    if (number < 0){
-        // {404, 404, 3} in display buffer will evaluate to ERR
-        display_buffer[0] = 404;
-        display_buffer[1] = 404;
-        display_buffer[2] = 3;
-        return;
-    }
-    // 1k to 99.9k range
-    if (number > 1000 && number < 100000){
-
-        uint8_t num_thousands = number / 1000;
-        num_decimal_part = number - (num_thousands * 1000);
-        display_buffer[0] = num_thousands;
-        
-        if (num_thousands < 10){
-            // example 7825 -> num_decimal = 825 (0.825), round to nearest hundreth 830 (0.830) and then do /= 10 so it becomes 83
-            
-            display_buffer[1] = round_to_hundredth(num_decimal_part);
-            display_buffer[2] = 1;
-        }
-        else if (num_thousands > 10){
-            // example 24789 -> num_decimal = 789 (0.789) round to nearest tenth so  789 -> 800 (0.800) then /= 100 so it becomes 8
-            display_buffer[1] = round_to_tenth(num_decimal_part);
-            display_buffer[2] = 2;
-        }
-    }
-    // 0 to 999 range
-    else if (number > 0 && number < 1000){
-        
-        uint16_t num_integer_part = (uint16_t) number;
-        num_decimal_part = (number - num_integer_part) * 1000;
-
-        // example 6.789123
-        if (number < 10 && number > 0){
-            display_buffer[1] = round_to_hundredth(num_decimal_part);
-            display_buffer[2] = 1;
-        }
-        // example 48.14722
-        else if (number > 10 && number < 100){
-            display_buffer[1] = round_to_tenth(num_decimal_part);
-            display_buffer[2] = 2;
-        }
-        // example 453.51452
-        else if (number > 10 && number < 1000){
-            
-            if (num_decimal_part > 500){
-                num_integer_part++;
-            }
-            
-            display_buffer[1] = 0;
-            display_buffer[2] = 3;
-            
-        }
-        
-        display_buffer[0] = num_integer_part;
-        
-    }
-}
 
 /*
 
@@ -141,8 +75,6 @@ display_codes(uint8_t mode);
 */
 
 void display_buffer_send(digit_pos_t digit_to_display){
-
-
 /*
 
 Make an array of length 4 instead of three for the buffer
