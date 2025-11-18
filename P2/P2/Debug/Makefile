@@ -34,8 +34,8 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../Drivers \
-../Include \
-../P2_Math
+../include \
+../P2
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -43,8 +43,11 @@ C_SRCS +=  \
 ../Drivers/adc.c \
 ../Drivers/display.c \
 ../Drivers/dmm_mode.c \
+../Drivers/gpio.c \
+../Drivers/timer.c \
 ../main.c \
-../P2_Math/p2_math.c
+../P2/p2_logic.c \
+../P2/p2_math.c
 
 
 PREPROCESSING_SRCS += 
@@ -57,29 +60,41 @@ OBJS +=  \
 Drivers/adc.o \
 Drivers/display.o \
 Drivers/dmm_mode.o \
+Drivers/gpio.o \
+Drivers/timer.o \
 main.o \
-P2_Math/p2_math.o
+P2/p2_logic.o \
+P2/p2_math.o
 
 OBJS_AS_ARGS +=  \
 Drivers/adc.o \
 Drivers/display.o \
 Drivers/dmm_mode.o \
+Drivers/gpio.o \
+Drivers/timer.o \
 main.o \
-P2_Math/p2_math.o
+P2/p2_logic.o \
+P2/p2_math.o
 
 C_DEPS +=  \
 Drivers/adc.d \
 Drivers/display.d \
 Drivers/dmm_mode.d \
+Drivers/gpio.d \
+Drivers/timer.d \
 main.d \
-P2_Math/p2_math.d
+P2/p2_logic.d \
+P2/p2_math.d
 
 C_DEPS_AS_ARGS +=  \
 Drivers/adc.d \
 Drivers/display.d \
 Drivers/dmm_mode.d \
+Drivers/gpio.d \
+Drivers/timer.d \
 main.d \
-P2_Math/p2_math.d
+P2/p2_logic.d \
+P2/p2_math.d
 
 OUTPUT_FILE_PATH +=P2.elf
 
@@ -116,6 +131,20 @@ Drivers/dmm_mode.o: ../Drivers/dmm_mode.c
 	@echo Finished building: $<
 	
 
+Drivers/gpio.o: ../Drivers/gpio.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/timer.o: ../Drivers/timer.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -123,7 +152,14 @@ Drivers/dmm_mode.o: ../Drivers/dmm_mode.c
 	@echo Finished building: $<
 	
 
-P2_Math/p2_math.o: ../P2_Math/p2_math.c
+P2/p2_logic.o: ../P2/p2_logic.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+P2/p2_math.o: ../P2/p2_math.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

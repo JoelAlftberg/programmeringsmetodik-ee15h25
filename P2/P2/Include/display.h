@@ -30,9 +30,9 @@ typedef enum{
 extern digit_pos_t digit_pins[3];
 extern uint8_t display_buffer[4];
 
-void display_digit(uint8_t digit, digit_pos_t digit_pos, uint8_t decimal_point);
-void display_buffer_send(digit_pos_t digit_to_display);
-void display_buffer_update(float number);
+void display_digit_driver(uint8_t digit, uint8_t digit_pos, uint8_t decimal_point);
+void display_update();
+void display_buffer_update(uint8_t digit_1, uint8_t digit_2, uint8_t digit_3, uint8_t decimal_point);
 
 
 #endif /* DISPLAY_H_ */
