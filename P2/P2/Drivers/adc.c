@@ -7,6 +7,7 @@
 
 #include "../include/adc.h"
 #include <avr/io.h>
+#include <stdbool.h>
 
 uint16_t read_analog_adc(analog_pin_t pin){
     ADMUX = ((1 << REFS0) | pin);
@@ -14,4 +15,8 @@ uint16_t read_analog_adc(analog_pin_t pin){
     while ((ADCSRA & (1 << ADIF)) == 0) ;
     ADCSRA |= (1 << ADIF);
     return ADC;
+}
+
+bool oversample(analog_pin_t analog_pin, uint16_t *sample_counter, uint16_t sample_amount, uint16_t sample_array[sample_amount]){
+    
 }

@@ -6,15 +6,13 @@ Drivers\adc.c
 
 Drivers\display.c
 
-Drivers\dmm_mode.c
-
 Drivers\gpio.c
 
 Drivers\timer.c
 
 main.c
 
-P2\p2_logic.c
+P2\p2_functionality.c
 
 P2\p2_math.c
 

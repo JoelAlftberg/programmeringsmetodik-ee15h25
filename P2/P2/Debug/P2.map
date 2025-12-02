@@ -20,53 +20,30 @@ Discarded input sections
  .text          0x00000000        0x0 Drivers/adc.o
  .data          0x00000000        0x0 Drivers/adc.o
  .bss           0x00000000        0x0 Drivers/adc.o
+ .text.oversample
+                0x00000000        0x2 Drivers/adc.o
  .text          0x00000000        0x0 Drivers/display.o
  .data          0x00000000        0x0 Drivers/display.o
  .bss           0x00000000        0x0 Drivers/display.o
  .text.display_buffer_code
                 0x00000000        0x2 Drivers/display.o
- .text          0x00000000        0x0 Drivers/dmm_mode.o
- .data          0x00000000        0x0 Drivers/dmm_mode.o
- .bss           0x00000000        0x0 Drivers/dmm_mode.o
- .debug_info    0x00000000       0x56 Drivers/dmm_mode.o
- .debug_abbrev  0x00000000       0x26 Drivers/dmm_mode.o
- .debug_aranges
-                0x00000000       0x18 Drivers/dmm_mode.o
- .debug_line    0x00000000       0x1a Drivers/dmm_mode.o
- .debug_str     0x00000000      0x167 Drivers/dmm_mode.o
- .comment       0x00000000       0x31 Drivers/dmm_mode.o
  .text          0x00000000        0x0 Drivers/gpio.o
  .data          0x00000000        0x0 Drivers/gpio.o
  .bss           0x00000000        0x0 Drivers/gpio.o
  .text          0x00000000        0x0 Drivers/timer.o
  .data          0x00000000        0x0 Drivers/timer.o
  .bss           0x00000000        0x0 Drivers/timer.o
- .text.ISR      0x00000000       0x72 Drivers/timer.o
  .text.init_real_time_clock
                 0x00000000        0x2 Drivers/timer.o
- .bss.check_mode_tick
-                0x00000000        0x2 Drivers/timer.o
- .bss.frame_update_tick
-                0x00000000        0x1 Drivers/timer.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .text          0x00000000        0x0 P2/p2_logic.o
- .data          0x00000000        0x0 P2/p2_logic.o
- .bss           0x00000000        0x0 P2/p2_logic.o
+ .text          0x00000000        0x0 P2/p2_functionality.o
+ .data          0x00000000        0x0 P2/p2_functionality.o
+ .bss           0x00000000        0x0 P2/p2_functionality.o
  .text          0x00000000        0x0 P2/p2_math.o
  .data          0x00000000        0x0 P2/p2_math.o
  .bss           0x00000000        0x0 P2/p2_math.o
- .text.round_integer
-                0x00000000       0x68 P2/p2_math.o
- .text.cascading_rounding
-                0x00000000        0x2 P2/p2_math.o
- .text.calculate_resistance
-                0x00000000       0x60 P2/p2_math.o
- .text.resistance_update_buffer
-                0x00000000      0x1f2 P2/p2_math.o
- .bss.factor_flag
-                0x00000000        0x1 P2/p2_math.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
@@ -146,8 +123,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
- .text.libgcc.mul
-                0x00000000       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .text.libgcc.div
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
@@ -178,11 +153,10 @@ Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD Drivers/adc.o
 LOAD Drivers/display.o
-LOAD Drivers/dmm_mode.o
 LOAD Drivers/gpio.o
 LOAD Drivers/timer.o
 LOAD main.o
-LOAD P2/p2_logic.o
+LOAD P2/p2_functionality.o
 LOAD P2/p2_math.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
@@ -293,7 +267,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x590
+.text           0x00000000      0xb7e
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -361,7 +335,6 @@ END GROUP
                 0x000000a2                __vector_3
                 0x000000a2                __vector_23
                 0x000000a2                __vector_25
-                0x000000a2                __vector_11
                 0x000000a2                __vector_13
                 0x000000a2                __vector_17
                 0x000000a2                __vector_19
@@ -384,51 +357,69 @@ END GROUP
                 0x000000a6       0x28 Drivers/adc.o
                 0x000000a6                read_analog_adc
  .text.display_digit_driver
-                0x000000ce       0x78 Drivers/display.o
+                0x000000ce       0x7e Drivers/display.o
                 0x000000ce                display_digit_driver
  .text.display_update
-                0x00000146       0x30 Drivers/display.o
-                0x00000146                display_update
+                0x0000014c       0x32 Drivers/display.o
+                0x0000014c                display_update
  .text.display_buffer_update
-                0x00000176        0xe Drivers/display.o
-                0x00000176                display_buffer_update
+                0x0000017e        0xe Drivers/display.o
+                0x0000017e                display_buffer_update
  .text.gpio_set_direction
-                0x00000184       0x72 Drivers/gpio.o
-                0x00000184                gpio_set_direction
+                0x0000018c       0x72 Drivers/gpio.o
+                0x0000018c                gpio_set_direction
  .text.gpio_digital_read
-                0x000001f6       0x34 Drivers/gpio.o
-                0x000001f6                gpio_digital_read
+                0x000001fe       0x34 Drivers/gpio.o
+                0x000001fe                gpio_digital_read
  .text.gpio_digital_write
-                0x0000022a       0x6e Drivers/gpio.o
-                0x0000022a                gpio_digital_write
+                0x00000232       0x6e Drivers/gpio.o
+                0x00000232                gpio_digital_write
+ .text.__vector_11
+                0x000002a0       0x92 Drivers/timer.o
+                0x000002a0                __vector_11
  .text.init_sys_timer
-                0x00000298       0x2c Drivers/timer.o
-                0x00000298                init_sys_timer
- .text.main     0x000002c4       0xf2 main.o
-                0x000002c4                main
+                0x00000332       0x2c Drivers/timer.o
+                0x00000332                init_sys_timer
+ .text.main     0x0000035e      0x244 main.o
+                0x0000035e                main
  .text.check_mode
-                0x000003b6       0x2a P2/p2_logic.o
-                0x000003b6                check_mode
+                0x000005a2       0x2a P2/p2_functionality.o
+                0x000005a2                check_mode
  .text.init_p2_gpio
-                0x000003e0       0x3a P2/p2_logic.o
-                0x000003e0                init_p2_gpio
+                0x000005cc       0x42 P2/p2_functionality.o
+                0x000005cc                init_p2_gpio
+ .text.round_integer
+                0x0000060e       0x68 P2/p2_math.o
+                0x0000060e                round_integer
+ .text.cascading_rounding
+                0x00000676       0x72 P2/p2_math.o
+                0x00000676                cascading_rounding
  .text.calculate_millivolt
-                0x0000041a       0x1a P2/p2_math.o
-                0x0000041a                calculate_millivolt
+                0x000006e8       0x1e P2/p2_math.o
+                0x000006e8                calculate_millivolt
+ .text.calculate_resistance
+                0x00000706       0x60 P2/p2_math.o
+                0x00000706                calculate_resistance
  .text.voltage_update_buffer
-                0x00000434       0xf6 P2/p2_math.o
-                0x00000434                voltage_update_buffer
+                0x00000766      0x172 P2/p2_math.o
+                0x00000766                voltage_update_buffer
+ .text.resistance_update_buffer
+                0x000008d8      0x22a P2/p2_math.o
+                0x000008d8                resistance_update_buffer
  .text.libgcc.div
-                0x0000052a       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000052a                __udivmodsi4
+                0x00000b02       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000b02                __udivmodsi4
  .text.libgcc.mul
-                0x0000056e       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x0000056e                __umulhisi3
-                0x0000058c                . = ALIGN (0x2)
+                0x00000b46       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x00000b46                __umulhisi3
+ .text.libgcc.mul
+                0x00000b64       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x00000b64                __muluhisi3
+                0x00000b7a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000058c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000058c                _exit
-                0x0000058c                exit
+ .fini9         0x00000b7a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000b7a                _exit
+                0x00000b7a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -447,11 +438,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000058c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000b7a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000590                _etext = .
+                0x00000b7e                _etext = .
 
-.data           0x00800100       0x9e load address 0x00000590
+.data           0x00800100       0x9e load address 0x00000b7e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -471,37 +462,43 @@ END GROUP
                 0x00800105       0x8c Drivers/gpio.o
                 0x00800105                arduino_mapping_gpio
  .rodata.output_pins
-                0x00800191        0x8 P2/p2_logic.o
+                0x00800191        0x8 P2/p2_functionality.o
  .rodata.input_pins
-                0x00800199        0x4 P2/p2_logic.o
+                0x00800199        0x4 P2/p2_functionality.o
  *(.gnu.linkonce.r*)
                 0x0080019e                . = ALIGN (0x2)
  *fill*         0x0080019d        0x1 
                 0x0080019e                _edata = .
                 0x0080019e                PROVIDE (__data_end, .)
 
-.bss            0x0080019e        0x9
+.bss            0x0080019e        0xc
                 0x0080019e                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.digit_counter
-                0x0080019e        0x1 Drivers/display.o
-                0x0080019e                digit_counter
  .bss.display_buffer
-                0x0080019f        0x4 Drivers/display.o
-                0x0080019f                display_buffer
- .bss.sys_tick  0x008001a3        0x4 Drivers/timer.o
-                0x008001a3                sys_tick
+                0x0080019e        0x4 Drivers/display.o
+                0x0080019e                display_buffer
+ .bss.check_mode_tick
+                0x008001a2        0x2 Drivers/timer.o
+                0x008001a2                check_mode_tick
+ .bss.frame_update_tick
+                0x008001a4        0x1 Drivers/timer.o
+                0x008001a4                frame_update_tick
+ .bss.sys_tick  0x008001a5        0x4 Drivers/timer.o
+                0x008001a5                sys_tick
+ .bss.factor_flag
+                0x008001a9        0x1 P2/p2_math.o
+                0x008001a9                factor_flag
  *(COMMON)
-                0x008001a7                PROVIDE (__bss_end, .)
-                0x00000590                __data_load_start = LOADADDR (.data)
-                0x0000062e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008001aa                PROVIDE (__bss_end, .)
+                0x00000b7e                __data_load_start = LOADADDR (.data)
+                0x00000c1c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008001a7        0x0
+.noinit         0x008001aa        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x008001a7                _end = .
+                0x008001aa                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -549,7 +546,7 @@ END GROUP
  .comment       0x00000030       0x31 Drivers/gpio.o
  .comment       0x00000030       0x31 Drivers/timer.o
  .comment       0x00000030       0x31 main.o
- .comment       0x00000030       0x31 P2/p2_logic.o
+ .comment       0x00000030       0x31 P2/p2_functionality.o
  .comment       0x00000030       0x31 P2/p2_math.o
 
 .note.gnu.avr.deviceinfo
@@ -572,96 +569,96 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x148
+.debug_aranges  0x00000000      0x150
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 Drivers/adc.o
+                0x00000000       0x28 Drivers/adc.o
  .debug_aranges
-                0x00000020       0x38 Drivers/display.o
+                0x00000028       0x38 Drivers/display.o
  .debug_aranges
-                0x00000058       0x30 Drivers/gpio.o
+                0x00000060       0x30 Drivers/gpio.o
  .debug_aranges
-                0x00000088       0x30 Drivers/timer.o
+                0x00000090       0x30 Drivers/timer.o
  .debug_aranges
-                0x000000b8       0x20 main.o
+                0x000000c0       0x20 main.o
  .debug_aranges
-                0x000000d8       0x28 P2/p2_logic.o
+                0x000000e0       0x28 P2/p2_functionality.o
  .debug_aranges
-                0x00000100       0x48 P2/p2_math.o
+                0x00000108       0x48 P2/p2_math.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x14bb
+.debug_info     0x00000000     0x1729
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4       0xd8 Drivers/adc.o
- .debug_info    0x000006cc      0x2d8 Drivers/display.o
- .debug_info    0x000009a4      0x1db Drivers/gpio.o
- .debug_info    0x00000b7f      0x143 Drivers/timer.o
- .debug_info    0x00000cc2      0x2f4 main.o
- .debug_info    0x00000fb6      0x19b P2/p2_logic.o
- .debug_info    0x00001151      0x36a P2/p2_math.o
+ .debug_info    0x000005f4      0x14d Drivers/adc.o
+ .debug_info    0x00000741      0x2e0 Drivers/display.o
+ .debug_info    0x00000a21      0x1db Drivers/gpio.o
+ .debug_info    0x00000bfc      0x12c Drivers/timer.o
+ .debug_info    0x00000d28      0x4bf main.o
+ .debug_info    0x000011e7      0x1b3 P2/p2_functionality.o
+ .debug_info    0x0000139a      0x38f P2/p2_math.o
 
-.debug_abbrev   0x00000000      0xc78
+.debug_abbrev   0x00000000      0xc4d
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2       0x7a Drivers/adc.o
- .debug_abbrev  0x0000061c      0x142 Drivers/display.o
- .debug_abbrev  0x0000075e      0x113 Drivers/gpio.o
- .debug_abbrev  0x00000871       0x90 Drivers/timer.o
- .debug_abbrev  0x00000901      0x11b main.o
- .debug_abbrev  0x00000a1c      0x102 P2/p2_logic.o
- .debug_abbrev  0x00000b1e      0x15a P2/p2_math.o
+ .debug_abbrev  0x000005a2       0xa3 Drivers/adc.o
+ .debug_abbrev  0x00000645      0x133 Drivers/display.o
+ .debug_abbrev  0x00000778      0x113 Drivers/gpio.o
+ .debug_abbrev  0x0000088b       0x7f Drivers/timer.o
+ .debug_abbrev  0x0000090a      0x11b main.o
+ .debug_abbrev  0x00000a25      0x102 P2/p2_functionality.o
+ .debug_abbrev  0x00000b27      0x126 P2/p2_math.o
 
-.debug_line     0x00000000      0xb9e
+.debug_line     0x00000000      0xd12
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000134       0xe7 Drivers/adc.o
- .debug_line    0x0000021b      0x185 Drivers/display.o
- .debug_line    0x000003a0      0x117 Drivers/gpio.o
- .debug_line    0x000004b7      0x11c Drivers/timer.o
- .debug_line    0x000005d3      0x1bc main.o
- .debug_line    0x0000078f      0x14b P2/p2_logic.o
- .debug_line    0x000008da      0x2c4 P2/p2_math.o
+ .debug_line    0x00000134       0xfd Drivers/adc.o
+ .debug_line    0x00000231      0x191 Drivers/display.o
+ .debug_line    0x000003c2      0x117 Drivers/gpio.o
+ .debug_line    0x000004d9      0x11c Drivers/timer.o
+ .debug_line    0x000005f5      0x262 main.o
+ .debug_line    0x00000857      0x159 P2/p2_functionality.o
+ .debug_line    0x000009b0      0x362 P2/p2_math.o
 
-.debug_frame    0x00000000      0x258
+.debug_frame    0x00000000      0x2d4
  *(.debug_frame)
- .debug_frame   0x00000000       0x24 Drivers/adc.o
- .debug_frame   0x00000024       0x68 Drivers/display.o
- .debug_frame   0x0000008c       0x44 Drivers/gpio.o
- .debug_frame   0x000000d0       0x44 Drivers/timer.o
- .debug_frame   0x00000114       0x24 main.o
- .debug_frame   0x00000138       0x44 P2/p2_logic.o
- .debug_frame   0x0000017c       0xdc P2/p2_math.o
+ .debug_frame   0x00000000       0x34 Drivers/adc.o
+ .debug_frame   0x00000034       0x74 Drivers/display.o
+ .debug_frame   0x000000a8       0x44 Drivers/gpio.o
+ .debug_frame   0x000000ec       0x64 Drivers/timer.o
+ .debug_frame   0x00000150       0x34 main.o
+ .debug_frame   0x00000184       0x44 P2/p2_functionality.o
+ .debug_frame   0x000001c8      0x10c P2/p2_math.o
 
-.debug_str      0x00000000      0x763
+.debug_str      0x00000000      0x7c9
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x15c Drivers/adc.o
-                                0x190 (size before relaxing)
- .debug_str     0x00000364      0x127 Drivers/display.o
+ .debug_str     0x00000208      0x1a2 Drivers/adc.o
+                                0x1d6 (size before relaxing)
+ .debug_str     0x000003aa      0x127 Drivers/display.o
                                 0x285 (size before relaxing)
- .debug_str     0x0000048b       0xa0 Drivers/gpio.o
+ .debug_str     0x000004d1       0xa0 Drivers/gpio.o
                                 0x21a (size before relaxing)
- .debug_str     0x0000052b       0x9b Drivers/timer.o
+ .debug_str     0x00000571       0x9b Drivers/timer.o
                                 0x1fd (size before relaxing)
- .debug_str     0x000005c6       0x95 main.o
-                                0x294 (size before relaxing)
- .debug_str     0x0000065b       0x28 P2/p2_logic.o
-                                0x1d4 (size before relaxing)
- .debug_str     0x00000683       0xe0 P2/p2_math.o
+ .debug_str     0x0000060c       0xe1 main.o
+                                0x308 (size before relaxing)
+ .debug_str     0x000006ed       0x30 P2/p2_functionality.o
+                                0x1dc (size before relaxing)
+ .debug_str     0x0000071d       0xac P2/p2_math.o
                                 0x2de (size before relaxing)
 
-.debug_loc      0x00000000      0x956
+.debug_loc      0x00000000      0xdd8
  *(.debug_loc)
- .debug_loc     0x00000000       0x21 Drivers/adc.o
- .debug_loc     0x00000021       0xec Drivers/display.o
- .debug_loc     0x0000010d       0x95 Drivers/gpio.o
- .debug_loc     0x000001a2       0x26 Drivers/timer.o
- .debug_loc     0x000001c8      0x109 main.o
- .debug_loc     0x000002d1       0x95 P2/p2_logic.o
- .debug_loc     0x00000366      0x5f0 P2/p2_math.o
+ .debug_loc     0x00000000       0x42 Drivers/adc.o
+ .debug_loc     0x00000042      0x151 Drivers/display.o
+ .debug_loc     0x00000193       0x95 Drivers/gpio.o
+ .debug_loc     0x00000228       0x63 Drivers/timer.o
+ .debug_loc     0x0000028b      0x332 main.o
+ .debug_loc     0x000005bd       0x95 P2/p2_functionality.o
+ .debug_loc     0x00000652      0x786 P2/p2_math.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -681,15 +678,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xd8
+.debug_ranges   0x00000000       0xe0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x10 Drivers/adc.o
- .debug_ranges  0x00000010       0x28 Drivers/display.o
- .debug_ranges  0x00000038       0x20 Drivers/gpio.o
- .debug_ranges  0x00000058       0x20 Drivers/timer.o
- .debug_ranges  0x00000078       0x10 main.o
- .debug_ranges  0x00000088       0x18 P2/p2_logic.o
- .debug_ranges  0x000000a0       0x38 P2/p2_math.o
+ .debug_ranges  0x00000000       0x18 Drivers/adc.o
+ .debug_ranges  0x00000018       0x28 Drivers/display.o
+ .debug_ranges  0x00000040       0x20 Drivers/gpio.o
+ .debug_ranges  0x00000060       0x20 Drivers/timer.o
+ .debug_ranges  0x00000080       0x10 main.o
+ .debug_ranges  0x00000090       0x18 P2/p2_functionality.o
+ .debug_ranges  0x000000a8       0x38 P2/p2_math.o
 
 .debug_macro
  *(.debug_macro)

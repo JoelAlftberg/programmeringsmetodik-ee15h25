@@ -5,6 +5,7 @@
  *  Author: joela
  */ 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 
 volatile uint32_t sys_tick = 0;
 volatile uint8_t frame_update_tick = 0;
@@ -13,7 +14,7 @@ volatile uint16_t check_mode_tick = 0;
 volatile uint8_t display_update_flag = 1;
 volatile uint8_t check_mode_flag = 1;
 
-ISR(TIMER1_COMPA_vect) {
+ISR(TIMER1_COMPA_vect){
 
     sys_tick++;
     
@@ -22,12 +23,12 @@ ISR(TIMER1_COMPA_vect) {
     check_mode_tick++;
     
     // 166 * 100 microseconds = 16.6 ms
-    if (frame_update_tick >= 166) {
+    if (frame_update_tick >= 55) {
         frame_update_tick = 0;
         display_update_flag = 1;
     }
     
-    if (check_mode_tick >= 1000){
+    if (check_mode_tick >= 10){
         check_mode_tick = 0;
         check_mode_flag = 1;
     }

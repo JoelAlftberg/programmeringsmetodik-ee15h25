@@ -34,19 +34,19 @@ uint16_t round_integer(uint16_t number){
 */
 void cascading_rounding(uint8_t *digit_1, uint8_t *digit_2, uint8_t *digit_3, uint8_t *decimal_point){
     
-    digit_3 = round_integer(digit_3);
+    *digit_3 = round_integer(*digit_3);
     
-    if (digit_3 == 10){
-        digit_3 = 0;
-        digit_2++;
+    if (*digit_3 == 10){
+        *digit_3 = 0;
+        (*digit_2)++;
     }
-    if (digit_2 == 10){
-        digit_2 = 0;
-        digit_1++;
+    if (*digit_2 == 10){
+        *digit_2 = 0;
+        (*digit_1)++;
     }
-    if (digit_3 == 10){
-        digit_3 = 1;
-        decimal_point = (decimal_point == 3) ? decimal_point - 2 : decimal_point + 1;
+    if (*digit_1 == 10){
+        *digit_1 = 1;
+        *decimal_point = (*decimal_point == 3) ? *decimal_point - 2 : *decimal_point + 1;
     }
     
 }
@@ -54,13 +54,12 @@ void cascading_rounding(uint8_t *digit_1, uint8_t *digit_2, uint8_t *digit_3, ui
 /*
     
 */
-uint16_t calculate_millivolt(uint16_t adc_value){
+uint32_t calculate_millivolt(uint32_t adc_value){
     
     uint8_t v_ref = 5;
-    uint8_t adc_max = 1023;
-
+    uint32_t adc_max = 16383;
     /* Scales up with 1000 to get millivolt*/
-    return ( (uint32_t) adc_value * v_ref * 1000) / adc_max;
+    return (uint32_t) ( adc_value * v_ref * 1000) / adc_max;
     
 }
 
@@ -106,18 +105,18 @@ void voltage_update_buffer(uint16_t voltage_mv, uint8_t divider_factor){
     
     if (voltage_mv > 10000){
         digit_1 = voltage_mv / 10000;
-        digit_2 = voltage_mv / 1000;
-        digit_3 = (voltage_mv % 1000) / 10;
-        decimal_point = 2;
-    }
-    else{
-        digit_1 = voltage_mv / 1000;
-        digit_2 = voltage_mv / 100;
-        digit_3 = (voltage_mv % 100);
+        digit_2 = (voltage_mv / 1000) % 10;
+        digit_3 = (voltage_mv % 1000) / 100;
         decimal_point = 1;
     }
+    else{
+        digit_1 = (voltage_mv / 1000);
+        digit_2 = (voltage_mv / 100) % 10;
+        digit_3 = (voltage_mv % 100) / 10; 
+        decimal_point = 0;
+    }
     
-    cascading_rounding(&digit_1, &digit_2, &digit_3, &decimal_point);
+    //cascading_rounding(&digit_1, &digit_2, &digit_3, &decimal_point);
     display_buffer_update(digit_1, digit_2, digit_3, decimal_point);
     
 }
@@ -178,12 +177,12 @@ void resistance_update_buffer(uint32_t resistance){
         /* 1k-10k ohm */
         else if (resistance < 100000){
             factor_1 = 10000;
-            decimal_point = 1;
+            decimal_point = 0;
         }
         /* 10-100k ohm */
         else if (resistance < 1000000){
             factor_1 = 100000;
-            decimal_point = 2;
+            decimal_point = 1;
         }
     }
 

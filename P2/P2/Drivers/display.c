@@ -29,7 +29,7 @@
 
 digit_pos_t digit_pins[3] = {digit_1_pin, digit_2_pin, digit_3_pin};
 uint8_t display_buffer[4] = {0, 0, 0, 0};
-uint8_t digit_counter = 0;
+
 
 void display_digit_driver(uint8_t digit, uint8_t digit_pos, uint8_t decimal_point){
     
@@ -45,9 +45,9 @@ void display_digit_driver(uint8_t digit, uint8_t digit_pos, uint8_t decimal_poin
     }    
     
     gpio_digital_write(2, digit & 0x01);
-    gpio_digital_write(3, digit & 0x02);
-    gpio_digital_write(4, digit & 0x04);
-    gpio_digital_write(5, digit & 0x08);
+    gpio_digital_write(3, (digit >> 1) & 0x01);
+    gpio_digital_write(4, (digit >> 2) & 0x01);
+    gpio_digital_write(5, (digit >> 3) & 0x01);
     gpio_digital_write(6, decimal_point);
     
 }
@@ -69,12 +69,12 @@ TODO: write drivers first for sending a number to a specific digit ex.
 display_codes(uint8_t mode);
 
 */
-void display_update(){
+void display_update(uint8_t *digit_counter){
     
-    display_digit_driver(display_buffer[digit_counter], digit_counter, (display_buffer[3] == digit_counter) ? 1 : 0);
-    digit_counter++;
-    if (digit_counter > 2){
-        digit_counter = 0;
+    display_digit_driver(display_buffer[*digit_counter], *digit_counter, (display_buffer[3] == *digit_counter) ? 1 : 0);
+    (*digit_counter)++;
+    if (*digit_counter > 2){
+        *digit_counter = 0;
     }
     
 }

@@ -13,9 +13,9 @@
 
 typedef enum{
     
-    digit_1_pin = 11,
+    digit_1_pin = 13,
     digit_2_pin = 12,
-    digit_3_pin = 13
+    digit_3_pin = 11
     
     } digit_pos_t;
 
